@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +11,7 @@
 	<style type="text/css">
 		@font-face {
 			font-family: code;
-			src: url(Coda-Regular.ttf);
+			src: url(gillsansnova_book.ttf);
 		}
 		.code {
 			font-family: code;
@@ -30,16 +34,16 @@
 			
 		</div>
 		<div class="col-2">
-			<a href="login.php" style="text-decoration: none; color: white">
-			<div class="col-10 pt-1" style="border:4px solid lime;">
-				<h2 class="text-center">Sign in</h2>
+			<a href="menu.php" style="text-decoration: none; color: white">
+			<div class="col-10 pt-1">
+				<h2 class="text-center" style="color:lime; text-decoration: underline; cursor: pointer;"><?php echo $_SESSION['login']; ?></h2>
 			</div>
 			</a>
 		</div>
 		<div class="col-2">
-			<a href="reg.php" style="text-decoration: none; color: white">
+			<a href="menu.php" style="text-decoration: none; color: white">
 			<div class="col-10 pt-1" style="border:4px solid lime;">
-				<h2 class="text-center">Registrate</h2>
+				<h2 class="text-center">Меню</h2>
 			</div>
 			</a>
 		</div>
@@ -80,12 +84,12 @@
 					<div class="col-5 ml-5 bg-black pt-1" style="border: 4px solid lime; height: 250px;">
 						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet </h3>
-						<button class="btn" style="background: lime">Start your project now!</button>
+						<button class="btn" style="background: lime; font-weight: bold;">Start your project now!</button>
 					</div>
 					<div class="col-5 ml-5 bg-black pt-1" style="border: 4px solid lime; height: 250px;">
 						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet </h3>
-						<button class="btn " style="background: lime">Start your project now!</button>
+						<button class="btn " style="background: lime; font-weight: bold;">Start your project now!</button>
 					</div>
 				</div>
 			</div>
@@ -96,20 +100,26 @@
 	<div class="col-11 mx-auto p-0 pb-4 mt-1" style="background: #071f0a">
 		<div class="col-12 p-0">
 			<div class="col-12 text-white pt-4" >
-				<h1 class="" style="text-decoration: underline;">This site:</h1>
+				<h1 class="" style="text-decoration: underline;">Этот сайт:</h1>
 				<br><br>
 				<div class="d-flex">
-					<div class="col-3 ml-5 bg-black pt-1" style="border: 4px solid cyan; height: 250px;">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua.  </h3>
+					<div class="col-3 ml-5 bg-black pt-1 text-center" style="border: 4px solid cyan; height: 250px;">
+						<h3>Профинансировал</h3>
+						<br><br>
+						<h1 style="font-weight: bold; text-decoration: underline;">314 K+</h1><br>
+						<h3>проектов</h3>
 					</div>
-					<div class="col-4 ml-5 bg-black pt-1" style="border: 4px solid cyan; height: 250px;">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua.  </h3>
+					<div class="col-4 ml-5 bg-black pt-1 text-center" style="border: 4px solid cyan; height: 250px;">
+						<h3>Помог вложить</h3>
+						<br><br>
+						<h1 style="font-weight: bold; text-decoration: underline;">₽ 300М+</h1><br>
+						<h3>для креативных работ</h3>
 					</div>
-					<div class="col-3 ml-5 bg-black pt-1" style="border: 4px solid cyan; height: 250px;">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua.  </h3>
+					<div class="col-3 ml-5 bg-black pt-1 text-center" style="border: 4px solid cyan; height: 250px;">
+						<h3>Имеет</h3>
+						<br><br>
+						<h1 style="font-weight: bold; text-decoration: underline;">100 В+</h1><br>
+						<h3>пользователей</h3>
 					</div>
 				</div><br><br>
 				<h1 class="">...And they keep rising!</h1>
@@ -118,17 +128,18 @@
 		</div>
 		
 	</div>
+	
 	<div class="col-11 mx-auto p-0 pb-4 mt-1" style="background: #071f0a">
 		<div class="col-12 p-0">
 			<div class="col-12 text-white pt-4" >
-				<h1 class="" style="text-decoration: underline;">This site:</h1>
+				<h1 class="" style="text-decoration: underline;">Рекомендуем:</h1>
 				<br><br>
 				<div class="d-flex">
 					<div class="col-5 ml-5 bg-black pt-1 p-2" style="border: 4px solid lime;">
-						<div class="col-5 mx-auto bg-kek" style="border: 4px solid lime;height: 200px">
-							<img src="">
+						<div class="col-5 mx-auto bg-black" style="border: 4px solid lime;height: 200px">
+							<img src="stonks.png" class="w-100">
 						</div>
-						<div class="col-8 mx-auto bg-kek text-center">
+						<div class="col-8 mx-auto text-center">
 							<h4>Opposum lolik dodik</h4>
 							
 						</div>
@@ -138,10 +149,10 @@
 						
 					</div>
 					<div class="col-5 ml-5 bg-black pt-1 p-2" style="border: 4px solid lime;">
-						<div class="col-5 mx-auto bg-kek" style="border: 4px solid lime;height: 200px">
-							<img src="">
+						<div class="col-5 mx-auto" style="border: 4px solid lime;height: 200px">
+							<img src="stonks.png" class="w-100">
 						</div>
-						<div class="col-8 mx-auto bg-kek text-center">
+						<div class="col-8 mx-auto text-center">
 							<h4>Opposum lolik dodik</h4>
 							
 						</div>
